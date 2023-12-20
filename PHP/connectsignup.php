@@ -15,7 +15,7 @@ if(!empty($userName)){
         if(mysqli_connect_error()){
             die('Connect Error ('.mysqli_connect_errno().')'.mysqli_connect_error());
         }else{
-            $sql = "INSET INTO form(userName,password) values (''
+            $sql = "INSET INTO form(userName,password) values ('');
         }
     }
 }

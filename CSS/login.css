@@ -29,7 +29,7 @@ body {
 
 .login-container h2 {
     margin-bottom: 20px;
-    color: #0bf432;
+    color: #13544e;
     font-weight: bolder;
     font-size: 32px;
 }
@@ -82,6 +82,8 @@ body {
 }
 #loginbtn{
     background-color: lightgray;
+    border-style: groove;
+
 }
 #loginbtn :hover{
     background-color:rgb(72, 229, 72) ;
@@ -89,5 +91,21 @@ body {
     color: rgb(254, 254, 255);
     border-radius: 6px;
     border-style: none;
+   
+    transition: 1s;
 
 }
+
+#fp{
+    margin-top: -5px;
+    font-size: smaller;
+    margin-left: -215px;
+}
+#fp a {
+    font-size: small;
+}
+ #fp   :hover{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: red;
+ }

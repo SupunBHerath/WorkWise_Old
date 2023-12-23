@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        } */
+
+        #search-container {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: center;
+            position: relative;
+        }
+
+        #search-bar {
+            width: 80%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        #search-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        #job-list {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #apply-button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        #filter-buttons {
+            margin-top: 10px;
+        }
+
+        .filter-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+            border-radius: 15px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="../CSS/About.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <header>
+            <h1>Job Search Page</h1>
+        </header>
+        <ul>
+        <li> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></li>
+        <li class="homebtn"><a href="#home">Home</a></li>
+        <li class="dropdown"> <a href="Search Job.html" class="dropbtn">Find Work</a>
+        </li>
+        <li class="dropdown"> <a href="#PostWork" class="dropbtn"> Find talent</a>
+        <li class="dropdown"> <a href="About.html" class="dropbtn"> About Us</a>
+        </li>
+        <!-- <li style="float:right"><a href="../HTML/Signup.html" class="singup" style="color:  #07be16;">
+                Sing Up</a> -->
+        </li>
+        <li style="float:right; margin-left: 30px;"><a href="../HTML/Login.html" class="login">Login</a></li>
+    </ul>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+    </div>
+   
+
+    <div id="search-container">
+        <input type="text" id="search-bar" placeholder="Search jobs..." list="job-titles">
+        <span id="search-icon" onclick="searchJobs()">🔍</span>
+        <datalist id="job-titles">
+            <option value="Software Engineer">
+            <option value="Graphic Designer">
+            <option value="Marketing Specialist">
+
+        </datalist>
+    </div>
+
+    <div id="filter-buttons">
+        <button onclick="filterByType('full-time')" class="filter-button">Full Time</button>
+        <button onclick="filterByType('part-time')" class="filter-button">Part Time</button>
+    </div>
+
+    <div id="job-list">
+
+    </div>
+
+    <script>
+        const fullTimeJobs = [
+            {
+                title: 'Software Engineer', vacancies: [
+                    { title: 'Software Engineer I (Full Time)', description: 'Entry-level position for software engineering.', type: 'full-time' },
+                    { title: 'Software Engineer II (Full Time)', description: 'Intermediate position for software engineering.', type: 'full-time' },
+                    { title: 'Software Engineer III (Full Time)', description: 'Experienced position for software engineering.', type: 'full-time' }
+                ]
+            },
+            {
+                title: 'Graphic Designer', vacancies: [
+                    { title: 'Graphic Designer I (Full Time)', description: 'Entry-level position for graphic design.', type: 'full-time' },
+                    { title: 'Graphic Designer II (Full Time)', description: 'Intermediate position for graphic design.', type: 'full-time' },
+                    { title: 'Graphic Designer III (Full Time)', description: 'Experienced position for graphic design.', type: 'full-time' }
+                ]
+            },
+            {
+                title: 'Marketing Specialist', vacancies: [
+                    { title: 'Marketing Specialist I (Full Time)', description: 'Entry-level position for marketing.', type: 'full-time' },
+                    { title: 'Marketing Specialist II (Full Time)', description: 'Intermediate position for marketing.', type: 'full-time' },
+                    { title: 'Marketing Specialist III (Full Time)', description: 'Experienced position for marketing.', type: 'full-time' }
+                ]
+            }
+        ];
+
+        const partTimeJobs = [
+            {
+                title: 'Software Engineer', vacancies: [
+                    { title: 'Software Engineer I (Part Time)', description: 'Part-time entry-level position for software engineering.', type: 'part-time' },
+                    { title: 'Software Engineer II (Part Time)', description: 'Part-time intermediate position for software engineering.', type: 'part-time' },
+                    { title: 'Software Engineer III (Part Time)', description: 'Part-time experienced position for software engineering.', type: 'part-time' }
+                ]
+            },
+            {
+                title: 'Graphic Designer', vacancies: [
+                    { title: 'Graphic Designer I (Part Time)', description: 'Part-time entry-level position for graphic design.', type: 'part-time' },
+                    { title: 'Graphic Designer II (Part Time)', description: 'Part-time intermediate position for graphic design.', type: 'part-time' },
+                    { title: 'Graphic Designer III (Part Time)', description: 'Part-time experienced position for graphic design.', type: 'part-time' }
+                ]
+            },
+            {
+                title: 'Marketing Specialist', vacancies: [
+                    { title: 'Marketing Specialist I (Part Time)', description: 'Part-time entry-level position for marketing.', type: 'part-time' },
+                    { title: 'Marketing Specialist II (Part Time)', description: 'Part-time intermediate position for marketing.', type: 'part-time' },
+                    { title: 'Marketing Specialist III (Part Time)', description: 'Part-time experienced position for marketing.', type: 'part-time' }
+                ]
+            }
+        ];
+
+        function displayJobListings(listings) {
+            const jobListContainer = document.getElementById('job-list');
+            jobListContainer.innerHTML = '';
+
+            listings.forEach(category => {
+                category.vacancies.forEach((job, index) => {
+                    const jobItem = document.createElement('div');
+                    jobItem.classList.add('job-item');
+                    jobItem.innerHTML = `<div>${job.title}</div>
+                                         <div>${job.description}</div>
+                                         <button onclick="applyForJob('${category.title}', ${index}, '${job.type}')" id="apply-button">Apply</button>`;
+                    jobListContainer.appendChild(jobItem);
+                });
+            });
+        }
+
+        function applyForJob(category, index, type) {
+            const job = (type === 'full-time') ? fullTimeJobs.find(jobCategory => jobCategory.title === category).vacancies[index]
+                : partTimeJobs.find(jobCategory => jobCategory.title === category).vacancies[index];
+            alert(`You applied for the position: ${category} - ${job.title}`);
+        }
+
+        function searchJobs() {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const fullTimeCategory = fullTimeJobs.find(category => category.title.toLowerCase() === searchTerm);
+            const partTimeCategory = partTimeJobs.find(category => category.title.toLowerCase() === searchTerm);
+
+            if (fullTimeCategory) {
+                displayJobListings([fullTimeCategory]);
+            } else if (partTimeCategory) {
+                displayJobListings([partTimeCategory]);
+            } else {
+                alert('No job category found for the given search term.');
+            }
+        }
+
+        function filterByType(type) {
+            const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+            const fullTimeCategory = fullTimeJobs.find(category => category.title.toLowerCase() === searchTerm && category.vacancies.some(job => job.type === type));
+            const partTimeCategory = partTimeJobs.find(category => category.title.toLowerCase() === searchTerm && category.vacancies.some(job => job.type === type));
+
+            if (searchTerm && fullTimeCategory) {
+                displayJobListings([{ ...fullTimeCategory, vacancies: fullTimeCategory.vacancies.filter(job => job.type === type) }]);
+            } else if (searchTerm && partTimeCategory) {
+                displayJobListings([{ ...partTimeCategory, vacancies: partTimeCategory.vacancies.filter(job => job.type === type) }]);
+            } else {
+                const jobs = (type === 'full-time') ? fullTimeJobs : partTimeJobs;
+                const matchingCategories = jobs.filter(category => category.title.toLowerCase().includes(searchTerm));
+
+                displayJobListings(matchingCategories);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

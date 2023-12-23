@@ -11,7 +11,11 @@
 
 <body>
     <header>
+        <?php 
+            include '/PHP/navbar.php';
+        ?>
     </header>
+    
 
     <div class="login-container">
         <a href="../HTML/Home.html"> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></a>
@@ -27,7 +31,9 @@
             <div class="form-group">
                 <label for="password" style="text-align: left;">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password">
-            </div><br>
+            </div>
+            <h5 id="fp"><a href="../HTML/Signup.html" >Forgot password ?</a>
+            </h5>
             <div class="form-group" id="loginbtn">
                 <button type="submit">Login</button>
 

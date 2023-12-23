@@ -1,0 +1,260 @@
+.logo {
+    width: 160px;
+    cursor: pointer;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.127) (rgb(0,0,0,.2))), url(../Image/Home/1.jpg); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #f5f5f5;
+}
+
+/* ---nav bar--- */
+
+.navbar {
+    position: stickypppp ;
+    top: 0;
+    background-color: #f5f5f5;
+    width: 100%;
+    opacity: .8;
+
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50px;
+    text-align: center;
+
+
+}
+
+.navbar2{
+    position: sticky;
+
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 14px 15px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 20px;
+    margin-right: 30px;
+    text-align: center;
+
+
+}
+
+.navbar a:hover {
+    color: #07be16;
+}
+
+
+/* ---nav bar--- */
+
+/* drop down */
+.dropbtn a {
+    display: inline-block;
+    color: rgb(12, 16, 248);
+    text-align: center;
+}
+
+.dropdown li {
+    display: inline-block;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    background-color: #00f000;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.drop-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.drop-content a:hover {
+    color: #23396f;
+    /* background-color: #fff; */
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+
+/* drop down */
+
+/* home welcome image*/
+.container {
+    max-width: 100%;
+    height: 670px;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0;
+    font-family: sans-serif;
+
+
+}
+
+.container h1 {
+    color: #13544e;
+    padding-top: 0px;
+    padding-left: 10px;
+    font-size: 75px;
+    font-weight: 800;
+
+}
+
+#workwise {
+    padding-left: 50px;
+    padding-top: 0;
+    margin-top: -40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: inherit;
+}
+
+.signbtn {
+    display: flex;
+    padding: 10px 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    background: #011630;
+    font-weight: 1000;
+    font-size: medium;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 60px;
+}
+
+.signbtn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.container h3 {
+    padding-left: 30px;
+    padding-top: 0;
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    font-style: inherit;
+    color: #23396f;
+    font-weight: 800;
+}
+
+/* flex */
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* code eka respons krna eka  */
+    text-align: center;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.flex-text {
+    background-color: #f1f1f100;
+    padding: 10px;
+    flex: 50%;
+    box-sizing: border-box;
+
+
+}
+
+.flex-image {
+    background-color: rgba(30, 143, 255, 0);
+    padding: 10px;
+    flex: 50%;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 60px; */
+    background-image: url(../Image/Home/4.gif);
+
+
+}
+
+.flex-image img {
+    margin-top: 100px;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+@media (max-width: 800px) {
+
+    .flex-text,
+    .flex-image {
+        flex: 100%;
+        height: 480px;
+    }
+
+    .container h1 {
+        font-size: 55px;
+    }
+
+    .container h3 {
+        font-size: 25px;
+    }
+
+  
+
+    #squareText {
+        margin-top: 250px;
+    }
+
+}
+
+
+
+
+/* home welcome image*/
+/* image bar */
+.imagebar {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../Image/Home/bar.png);
+    background-size: cover;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 8);
+
+}
+
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}

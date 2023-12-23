@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/tempary.css">
+    <title>Post Your Work</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Post Your Work</h1>
+        <p>Welcome to our "Post Your Work" section, a space dedicated to showcasing your creative projects and talents! Whether you're an artist, designer, photographer, or a creator in any other field, we invite you to share your work with our community.</p>
+        <p><strong>How it Works:</strong></p>
+        <ol>
+            <li><strong>Fill in the Details:</strong> Provide a title, a brief description of your work, and specify the category it falls under.</li>
+            <li><strong>Upload an Image:</strong> Share a visual representation of your project by uploading an image. This could be a snapshot, artwork, design, or any other relevant visual content.</li>
+            <li><strong>Submit Your Work:</strong> Hit the submit button, and your work will be shared with our community.</li>
+        </ol>
+        <p><strong>Guidelines:</strong></p>
+        <ul>
+            <li>Please ensure that your content adheres to our community guidelines.</li>
+            <li>Include a descriptive title and relevant category for easy navigation.</li>
+            <li>Provide a concise yet informative description of your work.</li>
+            <li>Only upload images that you have the right to share.</li>
+        </ul>
+        <p><strong>Note:</strong> Your submitted work may go through a brief review process before being featured on our platform. We appreciate your contribution to our creative community!</p>
+
+        <form action="submit.php" method="post" enctype="multipart/form-data">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required>
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

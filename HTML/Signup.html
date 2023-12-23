@@ -51,6 +51,11 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+
+        }
+        #S1 a{
+            text-decoration: none;
+            color: white;
         }
 
         .name-input {
@@ -89,6 +94,11 @@
             margin-left: 0px;
 
         }
+        #check{
+            float:inline-start ;
+            width: 15px;
+            height: 15px;
+        }
     </style>
 </head>
 
@@ -112,16 +122,18 @@
             <input type="password" id="password" name="password" placeholder="Password" required>
             <br>
             <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm password" required>
-            <br>
-            <div >
-               <h5 >Yes, I understand and agree to the Upwork Terms of Service</h5>
+            <br><br>
+            <div style="display: flex; gap: 20px;">
+                <input type="checkbox" name="check" id="check">
+               <h5 style="float: inline-end; margin-top: -.5px; ">Yes, I understand and agree to WorkWise </h5>
             </div>
 
             <center>
                 <br>
-                <button type="submit" id="S1" value="submit">Sign Up</button>
+                <button type="submit" id="S1" value="submit" ><a href="../HTML/Login.html"
+                    style="border: 0;">Sign Up</a></button>
             </center>
-            <br>
+            
             <h5 style="color: red;"> -- Already have WorkWise an account ? <a href="../HTML/Login.html"
                     style="border: 0; ">Login</a>
 

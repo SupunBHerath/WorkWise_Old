@@ -4,84 +4,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User</title>
-    <link rel="stylesheet" href="../CSS/user.css">
+    <title>Document</title>
+
+    <style>
+        .headerbar {
+            margin-top: -30px;
+            padding: 0;
+            height: 60px;
+            background-color: #13544e;
+        }
+
+        .headerbar h3 {
+            padding: 5px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .logo {
+            width: 110px;
+            cursor: pointer;
+            height: 30px;
+            margin-left: 15px;
+            margin-right: 20px;
+
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ---nav bar--- */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #f5f5f5be;
+            width: 100%;
+
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: rgb(7, 7, 7);
+            text-align: center;
+            padding: 5px;
+            text-decoration: none;
+            font-size: large;
+            font-weight: bolder;
+            margin-right: 10px;
+            text-align: center;
+
+
+        }
+
+        .navbar a:hover {
+            color: #07be16;
+            text-decoration: underline;
+            text-underline-offset: 4.5px;
+            transition: .2s;
+        }
+
+        #nf {
+            width: 20px;
+            height: 20px;
+            padding-top: 6px;
+        }
+
+        #ppimge {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #helloimge {
+            height: 40px;
+
+        }
+
+        /* --------------------------------- */
+        .conteant {
+            display: flex;
+            margin-left: 30px;
+            margin-right: 30px;
+            /* background-color: red; */
+            gap: 30px;
+        }
+
+        .left {
+            flex: 65%;
+            /* background-color: blue; */
+        }
+
+        .right {
+
+            flex: 35%;
+            background-color: #d8d8f7;
+            height: 630px;
+            color: rgb(0, 0, 0);
+            border-radius: 60px;
+            font-weight: bolder;
+            font-style: normal;
+        }
+
+
+
+        .localTime {
+            background-color: #7f7ff7;
+            margin-left: 30%;
+            margin-right: 70%;
+            width: 300px;
+            height: 130px;
+            text-align: center;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 40px;
+
+        }
+
+        .localTime h3 {
+            color: rgb(255, 255, 255);
+        }
+
+        .localTime h1 {
+            padding-top: 25px;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .jobCat table {
+            border-style: groove;
+            width: 90%;
+
+
+        }
+
+        .right-image {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 350px;
+        }
+
+        .right-image img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
 </head>
 
 <body>
-    <!-- ---nav bar--- -->
-    <div class="navbar">
-        <header>
-            <img src="../Image/logo/logo1.png" alt="logo" class="logo">
-        </header>
-        <div class="navbar2">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let time = document.getElementById("local-time");
+
+            setInterval(() => {
+                let d = new Date();
+                time.innerHTML = d.toLocaleTimeString();
+            }, 1000);
+        });
+    </script>
+    <header>
+        <div class="headerbar">
+            <h3> <img id="helloimge" src="../Image/User/HelloLoop.gif" alt="Hello !"> [Name]</h3>
+
+        </div>
+    </header>
+    <div class="all">
+        <!-- ---nav bar--- -->
+        <div class="navbar">
             <ul>
-                <li class="homebtn"><a href="#home">Home</a></li>
-                <li class="dropdown"> <a href="#squareText" class="dropbtn">Find Work</a>
+                <li> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></li>
+                <li><a href="#home">Find Work</a></li>
+                <li> <a href="#PostWork" class="dropbtn"> Find Talent </a>
+                <li> <a href="About.html" class="dropbtn"> My Work</a> </li>
+                <li style="float:right; margin-left: 10px;"><a href="../HTML/Login.html" class="login">
+                        <div id="ppimge" style="background-image: url(../Image/Home/w2.jpg);">
 
-                </li>
-              
-                <!-- dropdown list (find job) -->
-                <li class="dropdown"> <a href="#PostWork" class="dropbtn"> Post Your Work</a>
-                    <!-- <div class="drop-content">
-                    <a href="#i">Post Your Work</a>
-                    <a href="#">How to Find Your Work</a>
-                    <a href="#">About Us</a>
-                    javascript:void(0)
-                </div> -->
-                </li>
-                <!-- dropdown list (find job) -->
-                <li style="float:right"><a href="../HTML/Signup.html" class="singup" style="color:  #07be16;">PP</a>
-                </li>
-                <li style="float:right"><a href="../HTML/Login.html" class="login">Notification</a></li>
-
+                        </div>
+                    </a></li>
+                <li style="float:right; margin-left: 10px;"> <a href="About.html"><img id="nf"
+                            src="../Image/User/nf.png" alt=""></a>
             </ul>
-
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray; margin-top: -2px;">
         </div>
+        <!-- ---nav bar--- -->
+
     </div>
-    <!-- ---nav bar--- -->
 
-
-    <div class="container">
-        <div id="i" class="imagebar">
-            <br><br><br><br>
-            <div class="flex-container">
-                <div class="flex-text">
-                    <h1>Welcome to</h1>
-                    <h1 id="workwise"> <span style="color: black;">Supun B Herath !</span></h1>
-                    <h3>The #1 Site for Remote Jobs</h3>
-                    <button class="signbtn"><a href="#">Find Your Next Remote
-                            Job!</a></button>
-                    <br>
-
-                </div>
-                <div class="flex-image" id="flex-image">
-                    <!-- <img src="../Image/Home/5.jpg" alt=""> -->
-                </div>
+    <!-- --------------------------- -->
+    <div class="conteant">
+        <div class="right">
+            <div class="right-image" style="background-image: url(../Image/User/user.gif);">
             </div>
-            <br><br>
+            <table>
+                <tr>
+                    <td style="width: 78%; padding-left: 10px;"><h1>WorkWise job vacancies</h1></td>
+                    <td style="width: 10%; text-align: left;">
+                        <h2>[COUNT]</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 70%;padding-left: 10px;"><h1>My job vacancies</h1></td>
+                    <td style="width: 10%; text-align: left;">
+                        <h2>[COUNT]</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 75%;padding-left: 10px;"><h1>My job Workes</h1></td>
+                    <td style="width: 30%; text-align: left;">
+                        <h2>[COUNT]</h2>
+                    </td>
+                </tr>
+                
+                
 
+            </table>
         </div>
+        <div class="left">
+
+            <div class="localTime">
+                <h1 id="local-time"></h1>
+                <h3>"Lost time is never found again !</h3>
+            </div>
+
+
+            <div class="jobCat">
+                <h2>Job Recommended for you.</h2>
+                <table>
+                    <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr>
+                    <!-- --------------------------------------- -->
+                    <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr> <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr> <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr> <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr> <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr> <tr>
+                        <td style="width: 10%;"><img style="width: 60px ; height: 60px;" src="../Image/Home/w2.jpg"
+                                alt=""></td>
+                        <td style="width: 70%; text-align: left;">
+                            <p>
+                                sjsvhzmjvcmhjsv
+                                zsgfjsmzhfvjsmhfvhjcbjhsvcmj
+                                asmsavcsmavjshgcjmcjsbcsjmbcbsbvsbvsbvsdbvsvsdvmcmbncv
+                                vbmdbvmd
+                            </p>
+                        </td>
+                        <td style="width: 100%;"><a href="#"><img style="width: 120px ; height: 60px;"
+                                    src="../Image/User/applyimg.png" alt="Apply"></a></td>
+                    </tr>
+                    <!-- --------------------------------- -->
+                </table>
+            </div>
+        </div>
+
     </div>
 
-    <!-- image bar -->
-    <!-- rate -->
-   
-    <!-- footer -->
-    <a href="../HTML/footer.html">0</a>
-    <link rel="stylesheet" href="../HTML/footer.html">
-
-
-    <footer>
-        <br>
-        <hr style="height:3px;border-width:0;background-color:rgb(255, 255, 255)">
-        <br>
-        <p style="color: green; font-weight: bolder;">&copy; 2023 Your Workwise Website. All rights reserved.</p>
-        <br>
-        <hr style="height:3px;border-width:0;background-color:rgb(255, 255, 255)">
-        <br>
-    </footer>
 </body>
 
 </html>

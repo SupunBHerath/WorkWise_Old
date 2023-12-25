@@ -11,6 +11,10 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url(../Image/Home/1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         /* header {
@@ -80,32 +84,117 @@
             border-radius: 15px;
         }
 
+        /* nav bar add */
+        .headerbar {
+            margin-top: -30px;
+            padding: 0;
+            height: 50px;
+            background-color: #13544e;
+        }
+
+        .headerbar h3 {
+            padding: 5px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .logo {
+            width: 130px;
+            cursor: pointer;
+            height: 40px;
+            margin-left: 20px;
+            margin-right: 30px;
+
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #f5f5f5be;
+            width: 100%;
+            /* opacity: .9; */
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 50px;
+            text-align: center;
+
+        }
+
+        .navbar li {
+            float: left;
+        }
+
+        .navbar li a {
+            display: block;
+            color: rgb(7, 7, 7);
+            text-align: center;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-size: large;
+            font-weight: bolder;
+
+            margin-right: 35px;
+            text-align: center;
+
+
+        }
+
+        .navbar a:hover {
+            color: #07be16;
+            text-decoration: underline;
+            text-underline-offset: 4.5px;
+            transition: .2s;
+
+
+
+        }
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+
     </style>
     <link rel="stylesheet" href="../CSS/About.css">
 </head>
 
 <body>
-    <div class="navbar">
-        <header>
-            <h1>Job Search Page</h1>
-        </header>
-        <ul>
-        <li> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></li>
-        <li class="homebtn"><a href="#home">Home</a></li>
-        <li class="dropdown"> <a href="Search Job.html" class="dropbtn">Find Work</a>
-        </li>
-        <li class="dropdown"> <a href="#PostWork" class="dropbtn"> Find talent</a>
-        <li class="dropdown"> <a href="About.html" class="dropbtn"> About Us</a>
-        </li>
-        <!-- <li style="float:right"><a href="../HTML/Signup.html" class="singup" style="color:  #07be16;">
-                Sing Up</a> -->
-        </li>
-        <li style="float:right; margin-left: 30px;"><a href="../HTML/Login.html" class="login">Login</a></li>
-    </ul>
-    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    <header>
+        <div class="headerbar">
+            <h3>The #1 Site for Remote Jobs</h3>
 
+        </div>
+    </header>
+    <!-- ---nav bar--- -->
+    <div class="navbar">
+        <ul>
+            <li> <img src="../Image/logo/logo1.png" alt="logo" class="logo"></li>
+            <li class="homebtn"><a href="#home">Home</a></li>
+            <li class="dropdown"> <a href="Search Job.html" class="dropbtn">Find Work</a>
+            </li>
+            <li class="dropdown"> <a href="#PostWork" class="dropbtn"> Find talent</a>
+            <li class="dropdown"> <a href="About.html" class="dropbtn"> About Us</a>
+            </li>
+            <!-- <li style="float:right"><a href="../HTML/Signup.html" class="singup" style="color:  #07be16;">
+                    Sing Up</a> -->
+            </li>
+            <li style="float:right; margin-left: 30px;"><a href="../HTML/Login.html" class="login">Login</a></li>
+        </ul>
+        <hr style="height:2px;border-width:0;color:gray;background-color:gray">
     </div>
-   
+    <!-- ---nav bar--- -->
+
 
     <div id="search-container">
         <input type="text" id="search-bar" placeholder="Search jobs..." list="job-titles">
@@ -229,6 +318,16 @@
             }
         }
     </script>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+     <footer>
+        <br>
+        <hr style="height:3px;border-width:0;background-color:rgb(255, 255, 255)">
+        <br>
+        <p style="color: green; font-weight: bolder;">&copy; 2023 Your Workwise Website. All rights reserved.</p>
+        <br>
+        <hr style="height:3px;border-width:0;background-color:rgb(255, 255, 255)">
+        <br>
+    </footer>
 
 </body>
 

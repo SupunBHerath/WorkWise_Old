@@ -1,3 +1,16 @@
+.headerbar{
+    margin-top: -30px;
+    padding: 0;
+    height: 50px;
+    background-color: #13544e;
+}
+.headerbar h3{
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+
+
 .logo {
     width: 160px;
     cursor: pointer;
@@ -17,11 +30,11 @@ body {
 /* ---nav bar--- */
 
 .navbar {
-    position: stickypppp ;
+    position: sticky;
     top: 0;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5be;
     width: 100%;
-    opacity: .8;
+    /* opacity: .9; */
 
 }
 
@@ -33,12 +46,6 @@ body {
     border-radius: 50px;
     text-align: center;
 
-
-}
-
-.navbar2{
-    position: sticky;
-
 }
 
 .navbar li {
@@ -49,12 +56,12 @@ body {
     display: block;
     color: rgb(7, 7, 7);
     text-align: center;
-    padding: 14px 15px;
+    padding: 10px 12px;
     text-decoration: none;
     font-size: large;
     font-weight: bolder;
-    border-radius: 20px;
-    margin-right: 30px;
+  
+    margin-right: 35px;
     text-align: center;
 
 
@@ -62,46 +69,17 @@ body {
 
 .navbar a:hover {
     color: #07be16;
+    text-decoration: underline;
+    text-underline-offset: 4.5px;
+    transition: .2s;
+    
+   
+   
 }
 
 
 /* ---nav bar--- */
 
-/* drop down */
-.dropbtn a {
-    display: inline-block;
-    color: rgb(12, 16, 248);
-    text-align: center;
-}
-
-.dropdown li {
-    display: inline-block;
-}
-
-.drop-content {
-    display: none;
-    position: absolute;
-    background-color: #00f000;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
-}
-
-.drop-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
-
-.drop-content a:hover {
-    color: #23396f;
-    /* background-color: #fff; */
-}
-
-.dropdown:hover .drop-content {
-    display: block;
-}
-
-/* drop down */
 
 /* home welcome image*/
 .container {

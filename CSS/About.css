@@ -3,17 +3,9 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+   
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1px;
-    text-align: center;
-    line-height: .8;
-}
 
 .disc {
     max-width: 800px;
@@ -30,53 +22,73 @@ footer {
     padding: 0px;
     width: 100%;
 }
-/* ---nav bar--- */
+
+/* nav bar add */
+.headerbar{
+    margin-top: -30px;
+    padding: 0;
+    height: 50px;
+    background-color: #13544e;
+}
+.headerbar h3{
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.logo {
+    width: 130px;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 30px;
+
+}
 
 .navbar {
-
-top: 0;
-background-color: #13544e;
-width: 100%;
-opacity: .8;
+    position: sticky;
+    top: 0;
+    background-color: #f5f5f5be;
+    width: 100%;
+    /* opacity: .9; */
 
 }
 
 .navbar ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 50px;
+    text-align: center;
 
 }
 
 .navbar li {
-float: left;
+    float: left;
 }
 
 .navbar li a {
-display: block;
-color: rgb(255, 255, 255);
-text-align: center;
-padding: 14px 8px;
-text-decoration: none;
-font-size: large;
-font-weight: bolder;
-border-radius: 20px;
-margin-right: 30px;
-text-align: center;
-
+    display: block;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bolder;
+  
+    margin-right: 35px;
+    text-align: center;
 
 
 }
 
 .navbar a:hover {
-color: #07be16;
-}
-.logo {
-width: 160px;
-cursor: pointer;
-float: right;
-margin-top: -80px;
-
+    color: #07be16;
+    text-decoration: underline;
+    text-underline-offset: 4.5px;
+    transition: .2s;
+    
+   
+   
 }
